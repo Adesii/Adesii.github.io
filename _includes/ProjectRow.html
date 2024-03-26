@@ -1,0 +1,21 @@
+<div>
+    <h3 class="ProjectHeader">{{include.year}}</h3>
+    <ul class="ProjectItemRow">
+        {% for project in projects %}
+        <div class="ProjectItem" style="background-image: url({{project.image}});">
+            <div class="ProjectInfo">
+                {{project.name}}
+            </div>
+        </div>
+        {% endfor %}
+    </ul>
+</div>
+
+<script>
+    var projectItems = document.getElementsByClassName("ProjectItem");
+    for (var i = 0; i < projectItems.length; i++) {
+        projectItems[i].addEventListener("click", function () {
+            window.location.href = "projects/" + this.getElementsByClassName("ProjectInfo")[0].innerHTML.replace(/ /g, "") + ".html";
+        });
+    }
+</script>

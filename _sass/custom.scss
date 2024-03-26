@@ -1,0 +1,45 @@
+.text-underline-stuff {
+    text-decoration: underline;
+    color: $link-color;
+    border-radius: 0.1rem;
+    padding: 0.1rem;
+}
+h2 {
+    text-align: center;
+}
+
+.ProjectItemRow {
+    display: flex;
+    justify-content: center;
+    padding-left: 0;
+    //only allow 3 items per row
+    .ProjectItem {
+        width: 150px;
+        height: 150px;
+        border: 1px solid $border-color;
+        text-align: center;
+        transition: all 0.2s ease-in-out;
+
+        background-size: 150px 150px;
+        background-position: center;
+        background-repeat: repeat;
+
+        .ProjectDescription {
+            transition: all 0s cubic-bezier(1, 0, 0, 1);
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        &:hover {
+            border: 1px solid $link-color;
+            cursor: pointer;
+        }
+    }
+}
+.ProjectHeader {
+    text-align: center;
+}
+header{
+    //hide
+    display: none;
+}
